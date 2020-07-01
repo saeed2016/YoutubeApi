@@ -1,3 +1,4 @@
+#calculating duration of a playlist by working with Youtube Api( Corey Schafer channel)
 # document: https://developers.google.com/youtube/v3/docs
 from googleapiclient.discovery import build
 import os
@@ -8,7 +9,7 @@ api_key = "AIzaSyCwZ9DO370bjZLJ_xFdjnFS8d1-7yC8p1M"
 youtube = build('youtube', 'v3', developerKey=api_key)
 # by default only 5 playlists return .I use pagetoken to get all of the results in  one page at time then use while to loop throught it.
 nextPageToken = None
-# as duration in json file show like PT23M31S
+# as duration is  in json file show like PT23M31S
 hours_pattern = re.compile(r'(\d+)H')
 minutes_pattern = re.compile(r'(\d+)M')
 seconds_pattern = re.compile(r'(\d+)S')
