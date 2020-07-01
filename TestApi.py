@@ -7,7 +7,7 @@ import re
 from datetime import timedelta
 api_key = "AIzaSyCwZ9DO370bjZLJ_xFdjnFS8d1-7yC8p1M"
 youtube = build('youtube', 'v3', developerKey=api_key)
-# by default only 5 playlists return .I use pagetoken to get all of the results in  one page at time then use while to loop throught it.
+# by default only 5 playlists return. use pagetoken to get all of the results in  one page at time then use while to loop throught it.
 nextPageToken = None
 # as duration is  in json file show like PT23M31S
 hours_pattern = re.compile(r'(\d+)H')
