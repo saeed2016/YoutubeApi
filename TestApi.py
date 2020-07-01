@@ -1,5 +1,4 @@
-# https://developers.google.com/youtube/v3/docs
-# document by
+# document: https://developers.google.com/youtube/v3/docs
 from googleapiclient.discovery import build
 import os
 # using RegEx(regulare expression)
