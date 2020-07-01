@@ -1,10 +1,14 @@
+# https://developers.google.com/youtube/v3/docs 
 from googleapiclient.discovery import build
 import os
+# using RegEx(regulare expression)
 import re
 from datetime import timedelta
 api_key = "AIzaSyCwZ9DO370bjZLJ_xFdjnFS8d1-7yC8p1M"
 youtube = build('youtube', 'v3', developerKey=api_key)
+# by default only 5 playlists return .I use pagetoken to get all of the results in  one page at time then use while to loop throught it.
 nextPageToken = None
+# as duration in json file show like PT23M31S
 hours_pattern = re.compile(r'(\d+)H')
 minutes_pattern = re.compile(r'(\d+)M')
 seconds_pattern = re.compile(r'(\d+)S')
@@ -38,6 +42,7 @@ while True:
       hours=int(hours.group(1)) if hours else 0
       minutes=int(minutes.group(1)) if minutes else 0
       seconds=int(seconds.group(1)) if seconds else 0
+      #using timedelta to convert time to seconds
       video_seconds=timedelta(
          hours=hours,
          minutes=minutes,
