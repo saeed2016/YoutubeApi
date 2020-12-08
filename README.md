@@ -1,1 +1,1 @@
-# calculation duration of a playlist in a Youtube channel by interacting with Youtube api. 
+# calculation duration of a playlist in a Youtube channel by interacting with Youtube API. 
